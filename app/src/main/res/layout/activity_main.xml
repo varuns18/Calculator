@@ -1,19 +1,276 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16.dp"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="@string/app_name"
+        android:textSize="24.sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/inputOutput"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="8dp"
+        android:textSize="38.sp"
+        android:gravity="end|bottom"
+        android:layout_weight="1"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="460dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn1"
+                android:layout_width="0.dp"
+                android:layout_height="match_parent"
+                android:text="@string/_1"
+                android:textSize="20sp"
+                android:onClick="onDigitClick"
+                android:layout_margin="2dp"
+                android:layout_weight="1"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn2"
+                android:layout_width="0.dp"
+                android:layout_height="match_parent"
+                android:text="@string/_2"
+                android:textSize="20sp"
+                android:onClick="onDigitClick"
+                android:layout_margin="2dp"
+                android:layout_weight="1"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn3"
+                android:layout_width="0.dp"
+                android:layout_height="match_parent"
+                android:text="@string/_3"
+                android:textSize="20sp"
+                android:onClick="onDigitClick"
+                android:layout_margin="2dp"
+                android:layout_weight="1"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAdd"
+                android:layout_width="0.dp"
+                android:layout_height="match_parent"
+                android:onClick="onOperatorClick"
+                android:text="@string/add"
+                android:textSize="20sp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn4"
+                android:layout_width="0.dp"
+                android:layout_height="match_parent"
+                android:text="@string/_4"
+                android:textSize="20sp"
+                android:onClick="onDigitClick"
+                android:layout_margin="2dp"
+                android:layout_weight="1"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn5"
+                android:layout_width="0.dp"
+                android:layout_height="match_parent"
+                android:text="@string/_5"
+                android:textSize="20sp"
+                android:onClick="onDigitClick"
+                android:layout_margin="2dp"
+                android:layout_weight="1"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn6"
+                android:layout_width="0.dp"
+                android:layout_height="match_parent"
+                android:text="@string/_6"
+                android:textSize="20sp"
+                android:onClick="onDigitClick"
+                android:layout_margin="2dp"
+                android:layout_weight="1"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSub"
+                android:layout_width="0.dp"
+                android:layout_height="match_parent"
+                android:onClick="onOperatorClick"
+                android:text="@string/sub"
+                android:textSize="20sp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn7"
+                android:layout_width="0.dp"
+                android:layout_height="match_parent"
+                android:text="@string/_7"
+                android:textSize="20sp"
+                android:onClick="onDigitClick"
+                android:layout_margin="2dp"
+                android:layout_weight="1"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn8"
+                android:layout_width="0.dp"
+                android:layout_height="match_parent"
+                android:text="@string/_8"
+                android:textSize="20sp"
+                android:onClick="onDigitClick"
+                android:layout_margin="2dp"
+                android:layout_weight="1"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn9"
+                android:layout_width="0.dp"
+                android:layout_height="match_parent"
+                android:text="@string/_9"
+                android:textSize="20sp"
+                android:onClick="onDigitClick"
+                android:layout_margin="2dp"
+                android:layout_weight="1"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMult"
+                android:layout_width="0.dp"
+                android:layout_height="match_parent"
+                android:onClick="onOperatorClick"
+                android:text="@string/mult"
+                android:textSize="20sp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnaAc"
+                android:layout_width="0.dp"
+                android:layout_height="match_parent"
+                android:text="@string/ac"
+                android:textSize="20sp"
+                android:onClick="onClearClick"
+                android:layout_margin="2dp"
+                android:layout_weight="1"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn0"
+                android:layout_width="0.dp"
+                android:layout_height="match_parent"
+                android:text="@string/_0"
+                android:textSize="20sp"
+                android:onClick="onDigitClick"
+                android:layout_margin="2dp"
+                android:layout_weight="1"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDot"
+                android:layout_width="0.dp"
+                android:layout_height="match_parent"
+                android:text="@string/dot"
+                android:textSize="20sp"
+                android:onClick="onDecimalPointClick"
+                android:layout_margin="2dp"
+                android:layout_weight="1"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDiv"
+                android:layout_width="0.dp"
+                android:layout_height="match_parent"
+                android:onClick="onOperatorClick"
+                android:text="@string/div"
+                android:textSize="20sp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEql"
+            android:layout_width="match_parent"
+            android:layout_height="0.dp"
+            android:onClick="onEqualClick"
+            android:text="@string/eql"
+            android:textSize="20sp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>
